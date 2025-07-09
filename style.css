@@ -1,0 +1,58 @@
+body {
+  font-family:'Josefin Sans', sans-serif;
+  margin: 0;
+  background-color: #4E688E;
+  color: #01183B;
+}
+
+header {
+  background-color: #01183B;
+  color: white;
+  padding: 1em;
+  height: 75px;
+  width: 10000;
+  text-align: center;
+
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+}
+
+footer {
+  background-color: #01183B;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 10;
+  }
+
+#aibrain{
+      position: fixed;
+      top: 10;
+      right: 10;
+      width: 400px;
+      height: 300px;
+      border-radius: 20%;
+    }
+
+
