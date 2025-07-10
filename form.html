@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+   <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Page</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #01183b;
+    }
+
+    header {
+      background-color: #01183b;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    footer {
+      background-color: #01183b;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #4e688e;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      margin-top: 0;
+      color: #fff;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #f1f1f1;
+      font-weight: 500;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      background-color: #e6ecf3;
+      color: #01183b;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #5590d4;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3a79c0;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- <h1>AI Daily</h1> -->
+     <div>
+    <nav>
+      <a href="scitech.html">Tech/Science</a>
+      <a href="humanities.html">Humanities</a>
+      <a href="form.html">Feedback</a>
+      <div class="fixed">
+        <a href="index.html"> <img id="logo" src="images/logo.png", alt="hi" width="150" height="100"> </a>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="container">
+    <h2>We Value Your Feedback</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="John Doe" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label for="feedback-type">Feedback Type</label>
+      <select id="feedback-type" required>
+        <option value="">Select an option</option>
+        <option value="general">General</option>
+        <option value="bug">Bug Report</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" placeholder="Write your feedback here..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Company Name. All rights reserved.
+  </footer>
+
+</body>
+</html>
