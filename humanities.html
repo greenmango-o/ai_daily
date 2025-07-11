@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Daily AI News">
+  <meta name="keywords" content="AI, Developments, News">
+  <meta name="author" content="Grace Ma and Varun Ravi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanities - AI Daily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+     <style>
+    html, body {
+    height: 170%;
+    }
+
+    * :not(header):not(footer) {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #4E688E;
+    }
+
+    .gallery-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+
+    .gallery {
+      display: flex;
+      transition: transform 0.4s ease-in-out;;
+    }
+
+    .gallery-item {
+      flex: 0 0 100%;
+      padding: 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .gallery-item p {
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+
+    #box1 {
+      width: 100%;
+      height: 600px; 
+      background-color: #5590D4; 
+      color: white;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      z-index: 1;
+    }
+    
+    #hd1{
+      font-size: 60px;
+      color: black;
+      position: absolute; 
+      top: 80px;
+      left: 20px
+    }
+
+    #card1 {
+      width: 900px;
+      height: 800px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: white;
+      overflow: hidden;
+      margin: 20px;
+      display: block;
+      margin: auto;
+      margin-top: 600px;
+    }
+
+    #card1-content {
+      padding: 15px;
+    }
+    
+    #card1-text {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: black;
+      text-align: center;
+    }
+
+    #aibrain{
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      padding: 100px;
+      border-radius: 50%;
+      width: 800px;
+      height: 650px;
+    }
+
+    hr.dl {
+      border-top: 2px dashed white;
+      width: 120%;
+      position: absolute;
+      left: 0;
+      top: 1500px;
+      z-index: 100;
+    }
+
+    
+      
+
+    #card2 {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: white;
+      overflow: hidden;
+      margin: 20px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 100px;
+      text-align: center;
+
+    }
+
+    #card2-content {
+      padding: 15px;
+    }
+
+    #card2-title {
+      font-size: 1.2em;
+      margin: 0 0 10px;
+      color: black;
+    }
+
+    
+    
+
+    #card10 {
+      width: 100px;
+      height: 30px;
+      border: 0px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: white;
+      overflow: hidden;
+      display: block;
+      margin: auto;
+      margin-bottom: 80px;
+    }
+    
+    #card10-title {
+      font-size: 13px;
+      color: black;
+    }
+
+
+    #xbox{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    #ghibli{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    #law{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    #music{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    #med{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    #ig{
+      width: 500px;
+      height: 300px;
+      margin-top: 50px;
+      border-radius: 30%;
+    }
+
+    /* header{
+      height: 70px;
+    } */
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="scitech.html">Tech/Science</a>
+      <a href="humanities.html">Humanities</a>
+      <a href="form.html">Feedback</a>
+      <div class="fixed">
+        <a href="index.html"> <img id="logo" src="images/logo.png" alt="hi" width="150" height="100"> </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+<div id="box1">
+
+    <pre id="hd1">
+        AI THAT 
+        “THINKS” 
+        LIKE A 
+        HUMAN 
+    </pre>
+    <img id="aibrain" src="images/ai_brain.avif" alt="pic">
+  </div>
+    <div id="card1">
+      <div id="card1-content">
+          <p id="card1-text">
+            
+  Researchers have developed an AI system called Centaur by training a large language model 
+  (LLM) on a vast dataset of psychology experiments to mimic human behavior across various 
+  tasks. The team published a paper in Nature claiming Centaur can predict and simulate human 
+  responses in experiments expressed in natural language, often outperforming specialized 
+  cognitive models. For example, in decision-making tasks like the two-armed bandit experiment, 
+  Centaur’s outputs aligned more closely with human choices than traditional models. 
+  The model also performed well on modified versions of these tasks that it had not seen 
+  before, suggesting potential use in designing experiments “in silico.” However, many 
+  cognitive scientists remain skeptical of these claims, arguing that Centaur doesn’t 
+  genuinely replicate human thought processes. Critics highlight that the model demonstrates 
+  superhuman capabilities, such as recalling hundreds of digits and reacting in milliseconds, 
+  which are far beyond typical human limits. They warn that Centaur’s mechanisms differ 
+  fundamentally from those of the human mind, making it unreliable for generalizing beyond 
+  its training data.
+<br>
+<br>
+  Despite these criticisms, some researchers see value in the work, especially the large 
+  Psych-101 dataset comprising data from over 160 psychology experiments and 60,000 
+  participants. This dataset offers a rich resource for testing and developing future 
+  cognitive models. Experts suggest that exploring how Centaur functions internally could 
+  provide useful insights, even if it doesn’t yet explain human cognition. Many in the AI 
+  and neuroscience communities are cautiously optimistic that, although the paper makes some 
+  broad claims, the effort invested may lead to meaningful scientific advances over time.
+  Ultimately, Centaur represents a promising early step toward using AI to understand human 
+  behavior but requires further refinement and validation.
+</p>
+    </div>
+  </div>
+
+  <div id="card2">
+      <div id="card2-content">
+        <h3 id="card2-title">OTHER NEWS</h3>
+      </div>
+    </div>
+
+
+
+
+<div class="gallery-wrapper">
+  <div class="gallery" id="gallery">
+    <div class="gallery-item">
+      <h3>Xbox Producer Suggests AI to staff to Ease job loss pain</h3>
+      <img id="xbox" src="images/xbox.webp" alt="pic">
+      <p>An Xbox executive faced backlash after recommending that employees impacted by Microsoft’s 
+recent layoffs use artificial intelligence to help cope with their emotions—a suggestion he 
+made in a now-deleted LinkedIn post. Matt Turnbull, executive producer at Xbox Game Studios 
+Publishing, posted this shortly after Microsoft announced plans to cut up to 9,000 jobs, 
+about 4% of its global workforce, with the Xbox division reportedly affected. In his message, 
+Turnbull acknowledged the difficulty of layoffs and encouraged those affected to know they 
+are not alone, suggesting AI tools like ChatGPT and Microsoft Copilot could help ease the 
+mental strain of job loss. He shared prompts to assist with tasks such as resume writing, 
+LinkedIn updates, and gaining emotional clarity, emphasizing he was trying to offer practical 
+support. However, many found the suggestion insensitive, with critics calling it “plain disgusting” 
+and “tone-deaf” given the seriousness of layoffs. This controversy arises as Microsoft increases 
+its investment in AI, committing $80 billion to build data centers that support its expanding 
+AI infrastructure.</p>
+    </div>
+    <div class="gallery-item">
+      <h3>AI Art Generation And Its effects On Artists</h3>
+      <img id="ghibli" src="images/ai_ghibli.webp" alt="Image 2">
+      <p>Joy Cardaño, a full-time artist in the Philippines, has seen a sharp decline 
+        in commissions for her anime-inspired work as more people turn to AI-generated 
+        art. She and many other artists argue that AI threatens their livelihoods by 
+        mimicking their styles without consent, stripping value from years of creative 
+        effort. Cardaño publicly criticized the use of AI, calling it unethical and 
+        urging users to respect artists' rights, especially amid viral trends like 
+        Studio Ghibli-inspired AI art. Other artists, like Hollie Mengert and Sarah 
+        Andersen, have voiced similar concerns—Mengert found her style being imitated 
+        by AI, while Andersen joined a lawsuit against AI companies for copyright 
+        infringement. Despite OpenAI's safeguards against replicating the styles of 
+        living artists, worries persist, especially as AI tools remain capable of 
+        generating images that closely resemble popular aesthetics. While OpenAI CEO 
+        Sam Altman defends the technology as a net positive for creativity, many artists 
+        feel the financial and emotional impact of AI’s growing role in the art world
+</p>
+    </div>
+    <div class="gallery-item">
+      <h3>AI is being adapted by lawyers</h3>
+      <img id="law" src="images/ai_law.jpg" alt="Image 3">
+      <p>In recent years, legal professionals have become more open to using artificial 
+        intelligence (AI), recognizing its ability to improve productivity and transform 
+        legal work. According to Thomson Reuters’ 2024 Future of Professionals Report, 
+        AI tools are already automating routine tasks like legal research, document review, 
+        and contract drafting, saving lawyers up to four hours per week and potentially 
+        adding $100,000 in new billable hours annually. To fully benefit, legal 
+        professionals must adopt AI thoughtfully and ensure the tools they use are 
+        accurate, transparent, and built on trusted legal sources. As workflows become 
+        more efficient, many lawyers anticipate a shift away from hourly billing models 
+        and toward more value-based services. The time saved by AI could allow lawyers 
+        to focus on strategic planning, client relationships, and more meaningful, 
+        intellectually rewarding legal work. Ultimately, AI is helping reshape the legal 
+        industry, pushing professionals to adapt and deliver greater value to both clients 
+        and their firms.
+      </p>
+    </div>
+
+    <div class="gallery-item">
+      <h3> Music producer Paul Sinclair Uses AI to produce music</h3>
+      <img id="music" src="images/ai_music.webp" alt="Image 3">
+      <p>Suno, a major player in AI-generated music, has hired former Atlantic Records 
+        executive Paul Sinclair as its Chief Music Officer. Having advised the company 
+        for months, Sinclair will now help shape how Suno’s AI tools support music 
+        creation for artists at all levels. CEO Mikey Shulman praised Sinclair’s unique 
+        mix of industry and tech experience, calling it essential to the company’s next 
+        chapter. Sinclair says he’s excited to explore how AI can empower creativity, 
+        support artists, and deepen the connection between music and fans. His appointment 
+        comes amid growing debate over AI’s role in music, especially around copyright 
+        issues. Suno is currently facing a lawsuit from major record labels, though 
+        settlement talks are reportedly in progress.
+      </p>
+    </div>
+    
+    <div class="gallery-item">
+      <h3> AI is transforming the world of medicine</h3>
+      <img id="med" src="images/ai_medicine.webp" alt="Image 3">
+      <p>AI is rapidly transforming medicine, shifting from a time-consuming tool for 
+        information retrieval into a real-time assistant that can summarize research, 
+        support diagnoses, and improve doctor-patient interactions. Tools like 
+        OpenEvidence, built on large language models like ChatGPT, are helping doctors 
+        make faster, more informed decisions, although concerns remain about biases, 
+        hallucinated facts, and the risk of minimal systemic change. Experts argue that 
+        AI's success in medicine hinges on addressing inequities, integrating diverse 
+        data, and ensuring human oversight to avoid reinforcing flawed legacy systems. 
+        In research and education, AI is already enabling major scientific advances and 
+        reshaping how future clinicians are trained, from protein structure prediction to 
+        virtual patient simulations. While challenges persist, many believe that embracing 
+        AI boldly, ethically, and with systemic reform can lead to a more equitable and 
+        effective healthcare systems
+      </p>
+    </div>
+    
+    <div class="gallery-item">
+      <h3>Soul AI Image Generation Stuns Many</h3>
+      <img id="ig" src="images/ai_image.webp" alt="Image 3">
+      <p>AI image generators have existed for years, but their realism has advanced rapidly 
+        in recent months. Tools like ChatGPT, Gemini, Firefly, and Midjourney now create 
+        visuals that are nearly indistinguishable from real photos, often without visible 
+        watermarks. ChatGPT’s release of its 4o image generator brought a wave of attention, 
+        but Google’s Gemini, powered by Imagen 4 and Imagen 4 Ultra, offers similarly 
+        powerful results. A new player, Soul—developed by Higgsfield—has quickly gone viral 
+        for its highly aesthetic, photo-realistic output, often compared to professional 
+        smartphone photography. Soul features over 50 built-in presets, such as “iPhone” and 
+        “Tokyo Streetstyle,” which make generating specific styles simple and fast, without 
+        needing to describe technical details. While it doesn’t support image uploads, a $9 
+        monthly subscription gives users 150 credits and watermark-free images, all 
+        accessible through a web browser.
+      </p>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button id="prevBtn">← Previous</button>
+    <button id="nextBtn">Next →</button>
+  </div>
+</div>
+
+ 
+ 
+
+
+  <script>
+  const gallery = document.getElementById('gallery');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const totalItems = gallery.children.length;
+  let currentIndex = 0;
+
+  function updateGallery() {
+    const width = gallery.clientWidth;
+    gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === totalItems - 1;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateGallery();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalItems - 1) {
+      currentIndex++;
+      updateGallery();
+    }
+  });
+
+  // Initial state
+  updateGallery();
+</script>
+<hr class="dl">
+</main>
+  <footer>
+    <h3> &copy; Contact Us - AI Daily: aidaily25@gmail.com</h3>
+
+  </footer>
+</body>
+</html>
